@@ -4,6 +4,7 @@
 	--accent: #2196f3;
 	--secondary-background-color: #2f303a;
 	--primary-bg-color: #ffffff;
+	--icon-gray: #afb1b8;
 }
 
 /* основной цвет текста #212121 */
@@ -169,8 +170,19 @@ body {
 /* Hero */
 
 .hero-section {
+	max-width: 1600px;
+	height: 600px;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 200px 0px;
 	text-align: center;
+
+	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+		url("../image/hero-image.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: var(--secondary-background-color);
 }
 
 .hero-title {
@@ -183,10 +195,6 @@ body {
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
 	margin-bottom: 30px;
-}
-
-.darkbgr {
-	background-color: var(--secondary-background-color);
 }
 
 .hero-button {
@@ -209,8 +217,9 @@ body {
 
 .hero-button:hover,
 .hero-button:focus {
-	background-color: #188ce8;
 	cursor: pointer;
+	border: 1px solid var(--accent);
+	border-radius: 0px;
 }
 
 /* .hero-button.primary {
@@ -306,18 +315,14 @@ body {
 .team-list .items {
 	width: 270px;
 	margin: 15px;
+	background-color: var(--primary-bg-color);
 
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
 }
 
-/*.team-image {
-	margin-bottom: 20px;
-}*/
-
 .team-content {
-	padding: 30px 0px;
-	/*outline: 2px solid orangered;*/
+	padding: 30px 32px;
 }
 
 .team-section .sub-title {
@@ -336,12 +341,46 @@ body {
 	line-height: 1.19;
 	text-align: center;
 	letter-spacing: 0.03em;
-	/*margin-bottom: 30px;*/
+	margin-bottom: 16px;
+}
+
+.team-soc {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	/*margin-left: auto;
+	margin-right: auto;*/
+}
+
+.team-soc-link {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	display: block;
+	background-color: var(--primary-bg-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.team-soc-icon {
+	fill: var(--icon-gray);
+}
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+	background-color: var(--accent);
+}
+
+.team-soc-link:hover .team-soc-icon,
+.team-soc-link:focus .team-soc-icon {
+	fill: var(--primary-bg-color);
 }
 
 /* address */
 .footer {
 	padding: 60px 0px;
+	background-color: #2f303a;
 }
 
 /* Site-logo */
