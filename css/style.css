@@ -97,10 +97,6 @@ body {
 	justify-content: center;
 } */
 
-.auth-nav {
-	margin-left: auto;
-}
-
 /* Site-logo */
 .page-header-logo {
 	color: var(--accent);
@@ -123,18 +119,32 @@ body {
 
 /* Site-nav */
 
-/*.site-nav > .item:not(:last-child) {
-	margin-right: 50px;
-}*/
-
-.site-nav,
-.auth-nav {
+.site-nav {
 	gap: 50px;
 }
 
-/*.auth-nav > .item:not(:last-child) {
-	margin-right: 50px;
+.auth-nav {
+	margin-left: auto;
+	gap: 30px;
+}
+
+/*.auth-nav .item {
+	display: flex;
+	align-items: center;
 }*/
+
+.auth-nav-link {
+	display: flex;
+	display: block;
+	align-items: center;
+	color: var(--primary-text-color);
+}
+
+.auth-icons {
+	margin-right: 10px;
+	width: 16px;
+	height: 16px;
+}
 
 .site-nav-link,
 .auth-nav-link {
@@ -152,15 +162,15 @@ body {
 	/*outline: 2px solid orange;*/
 }
 
-.auth-nav-link {
-	color: var(--primary-text-color);
+.site-nav-link:hover,
+.site-nav-link:focus {
+	color: var(--accent);
 }
 
-.site-nav-link:hover,
-.site-nav-link:focus,
 .auth-nav-link:hover,
 .auth-nav-link:focus {
 	color: var(--accent);
+	fill: var(--accent);
 }
 
 .site-nav-link.current {
@@ -244,7 +254,8 @@ body {
 /* sections title */
 .benefits-section .title,
 .work-section .title,
-.team-section .title {
+.team-section .title,
+.client-section .title {
 	color: var(--title-text-color);
 	font-style: normal;
 	font-weight: 700;
@@ -261,15 +272,22 @@ body {
 	display: flex;
 	gap: 30px;
 }
+
 .benefits-list .item {
 	width: calc((100%-90px) / 4);
 	max-width: 270px;
 	/*	outline: 2px solid orange;*/
 }
 
-/*.benefits-list .item:not(:last-child) {
-	margin-right: 30px;
-}*/
+.benefits-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 270px;
+	height: 120px;
+	background-color: #f5f4fa;
+	margin-bottom: 30px;
+}
 
 .benefits-section .sub-title {
 	color: var(--title-text-color);
@@ -377,6 +395,44 @@ body {
 	fill: var(--primary-bg-color);
 }
 
+/* clients-section */
+
+.clients {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	/*outline: 2px solid greenyellow;*/
+}
+
+.clients-link {
+	width: 170px;
+	height: 92px;
+	border: 1px solid var(--icon-gray);
+	border-radius: 0px;
+	display: block;
+	background-color: var(--primary-bg-color);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*outline: 2px solid rgb(255, 47, 151);*/
+}
+
+.clients-icon {
+	fill: var(--icon-gray);
+	width: 106px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+	border: 1px solid var(--accent);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+	fill: var(--accent);
+}
+
 /* address */
 .footer {
 	padding: 60px 0px;
@@ -425,6 +481,59 @@ body {
 	color: #ffffff;
 }
 
+.footer-title {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: var(--primary-bg-color);
+	margin-top: 12px;
+	margin-bottom: 20px;
+}
+
+.footer-soc {
+	display: flex;
+	justify-content: left;
+	gap: 10px;
+	/*margin-left: auto;
+	margin-right: auto;*/
+}
+
+.footer-soc-link {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	display: block;
+	background-color: rgba(255, 255, 255, 0.1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-soc-icon {
+	fill: var(--primary-bg-color);
+}
+
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+	background-color: var(--accent);
+}
+
+.footer-soc-link:hover .team-soc-icon,
+.footer-soc-link:focus .team-soc-icon {
+	fill: var(--primary-bg-color);
+}
+
+.footer-box {
+	display: flex;
+}
+
+.footer-right {
+	margin-left: 70px;
+}
 /* portfolio page */
 
 /* filter section */
@@ -459,6 +568,8 @@ body {
 .filter-button:focus {
 	background-color: var(--accent);
 	color: var(--primary-bg-color);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
 	cursor: pointer;
 }
 
@@ -496,4 +607,8 @@ body {
 .card-content {
 	padding: 20px 24px;
 	border: 1px solid #eeeeee;
+}
+
+.card-set > .item:hover {
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
